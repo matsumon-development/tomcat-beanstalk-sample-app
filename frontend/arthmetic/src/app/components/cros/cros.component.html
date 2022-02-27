@@ -1,0 +1,91 @@
+<body>
+  <h2><b>Addition</b></h2>
+  <form #dataForm="ngForm">
+    <div class="input">
+      <p>
+        <mat-form-field>
+          <input matInput type=number #val1="ngModel" name="val1" [(ngModel)]="v1" required/>
+          <mat-error *ngIf="val1.hasError('required')">入力必須</mat-error>
+        </mat-form-field>
+
+        +
+
+        <mat-form-field>
+          <input matInput type=number #val2="ngModel" name="val2" [(ngModel)]="v2" required/>
+          <mat-error *ngIf="val2.hasError('required')">入力必須</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]="dataForm.invalid" class='formitem' color='primary' (click)="onClickPlus($event)">=</button>
+
+      </p>
+    </div>
+  </form>
+
+  <h2><b>Subtraction</b></h2>
+  <form #dataForm="ngForm">
+    <div class="input">
+      <p>
+        <mat-form-field>
+          <input matInput type=number #val1="ngModel" name="val1" [(ngModel)]="v1" required/>
+          <mat-error *ngIf="val1.hasError('required')">入力必須</mat-error>
+        </mat-form-field>
+
+        -
+
+        <mat-form-field>
+          <input matInput type=number #val2="ngModel" name="val2" [(ngModel)]="v2" required/>
+          <mat-error *ngIf="val2.hasError('required')">入力必須</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]="dataForm.invalid" class='formitem' color='primary' (click)="onClickMinus($event)">=</button>
+
+      </p>
+    </div>
+  </form>
+
+
+  <h2><b>Multiplication</b></h2>
+  <form #dataForm="ngForm">
+    <div class="input">
+      <p>
+        <mat-form-field>
+          <input matInput type=number #val1="ngModel" name="val1" [(ngModel)]="v1" required/>
+          <mat-error *ngIf="val1.hasError('required')">入力必須</mat-error>
+        </mat-form-field>
+
+        X
+
+        <mat-form-field>
+          <input matInput type=number #val2="ngModel" name="val2" [(ngModel)]="v2" required/>
+          <mat-error *ngIf="val2.hasError('required')">入力必須</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]="dataForm.invalid" class='formitem' color='primary' (click)="onClickCross($event)">=</button>
+
+      </p>
+    </div>
+  </form>
+
+
+  <h2><b>Division</b></h2>
+  <form #dataForm="ngForm">
+    <div class="input">
+      <p>
+        <mat-form-field>
+          <input matInput type=number #val1="ngModel" name="val1" [(ngModel)]="v1" required/>
+          <mat-error *ngIf="val1.hasError('required')">入力必須</mat-error>
+        </mat-form-field>
+
+        ÷
+
+        <mat-form-field>
+          <input matInput type=number #val2="ngModel" name="val2" [(ngModel)]="v2" required/>
+          <mat-error *ngIf="val2.hasError('required')">入力必須</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]="dataForm.invalid" class='formitem' color='primary' (click)="onClickDivid($event)">=</button>
+
+      </p>
+    </div>
+  </form>
+</body>

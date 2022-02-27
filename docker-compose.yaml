@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web-server:
+    #platform: 'linux/x86_64' #M1 Mac
+    build: frontend
+    ports:
+      - 80:80
+
+  api-server:
+    #platform: 'linux/x86_64' #M1 Mac
+    build: backend
+    ports:
+      - 8080:8080
